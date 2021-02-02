@@ -13,9 +13,10 @@ class AdminController extends Controller
 {
     //
     public function OpenMainPage(){
+        $users = User::all();
         $managers = Manager::all();
         $confirm_acc = user::all()->where('status',0)->sortBy('role');
-        return view('admin_page',['confirm_acc'=>$confirm_acc,'managers'=>$managers]);
+        return view('admin_page',['confirm_acc'=>$confirm_acc,'managers'=>$managers, 'users'=>$users]);
 
     }
 
@@ -43,7 +44,7 @@ class AdminController extends Controller
         $teacher = $req->chosen;
         if(Auth::user()->role == 'admin'){
             foreach($teacher as $t){
-                DB::table('users')->find($t)->update(['status'=>1]);
+                User::all()->find($t)->update(['status'=>1]);
             }
         }
 

@@ -15,15 +15,18 @@ class ManagerController extends Controller
 {
     //
     public function OpenMainPage(){
-        $teachers = teacher::all();
-        $managers = manager::all();
-        $group = group::all();
-        $confirm_acc = user::all()->where('status',0)->where('role','student');
-        return view('manager_page',['teachers'=>$teachers,'managers'=>$managers,'confirm_acc'=>$confirm_acc,'group'=>$group]);
+        if(Auth::user()->status){
+            $teachers = teacher::all();
+            $managers = manager::all();
+            $group = group::all();
+            $confirm_acc = user::all()->where('status',0)->where('role','student');
+            return view('manager_page',['teachers'=>$teachers,'managers'=>$managers,'confirm_acc'=>$confirm_acc,'group'=>$group]);
+        }
+        return view('manager_page');
     }
     public function confirm_students(Request $req){
         $teacher = $req->chosen;
-        if(Auth::user()->role == 'manager'){
+        if(Auth::user()->role == 'manager' && Auth::user()->status){
             foreach($teacher as $t){
                 DB::table('users')->find($t)->update(['status'=>1]);
             }
@@ -31,7 +34,7 @@ class ManagerController extends Controller
     }
     public function create_group(Request $req){
 
-        if(Auth::user()->role == 'manager'){
+        if(Auth::user()->role == 'manager' && Auth::user()->status){
 
             Group::create([
                 'name'=>$req->name_of_group,
@@ -40,7 +43,7 @@ class ManagerController extends Controller
     }
 
     public function create_subject(Request $req){
-        if(Auth::user()->role == 'manager'){
+        if(Auth::user()->role == 'manager' && Auth::user()->status){
             Subject::create([
                 'name'=>$req->name_of_subject,
                 'id_teacher'=>$req->teacher_name,

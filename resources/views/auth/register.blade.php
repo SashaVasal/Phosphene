@@ -11,7 +11,7 @@
     <link href="{{URL::asset('lib/font-awesome/css/font-awesome.css') }})" rel="stylesheet">
     <link href="{{URL::asset('lib/Ionicons/css/ionicons.css')}}" rel="stylesheet">
     <link href="{{URL::asset('lib/select2/css/select2.min.css')}}" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{URL::asset('css/starlight.css')}}">
@@ -19,13 +19,13 @@
 
 <body>
 
-<div class="d-flex align-items-center justify-content-center bg-sl-primary ht-md-100v">
+<div class="d-flex align-items-center justify-content-center bg-sl-primary ht-md-100v" >
 
     <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white">
         <form method="POST" id="create" action="">
             @csrf
 
-            <div class="signin-logo tx-center tx-24 tx-bold tx-inverse">StarLight</div>
+            <div class="signin-logo tx-center tx-24 tx-bold tx-inverse" style="margin-bottom: 20px">Phosphene</div>
 
             <div class="form-group">
                 <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Введите свое имя" id="name" name="name"  value="{{ old('name') }}" required autocomplete="name" autofocus  enctype="multipart/form-data">
@@ -46,7 +46,7 @@
             </div><!-- form-group -->
 
             <div class="form-group">
-                <input type="email" class="form-control  @error('name') is-invalid @enderror" placeholder="email" id="email " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <input type="email" class="form-control  @error('name') is-invalid @enderror" placeholder="Введите email" id="email " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -55,7 +55,7 @@
             </div><!-- form-group -->
 
             <div class="form-group">
-                <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter your password" id="password " name="password" required autocomplete="new-password">
+                <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Введите пароль" id="password " name="password" required autocomplete="new-password">
                 @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -64,7 +64,7 @@
             </div><!-- form-group -->
 
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Accept your password" id="password " name="password_confirmation" required autocomplete="new-password">
+                <input type="password" class="form-control" placeholder="Подтвердите пароль" id="password " name="password_confirmation" required autocomplete="new-password">
             </div><!-- form-group -->
 
             <div class="form-group">
@@ -104,14 +104,18 @@
                 <input type="text" class="form-control" placeholder="Название кафедры" id="chair_name" name="chair_name">
 
             </div>
-            <div class="col-md-6">
-                <input type="file" name="select_file" value="select_file" id="select_file" class="form-control">
+
+            <div class="form-group" >
+                <label class="custom-file">
+                    <input type="file" id="file" class="custom-file-input" name="select_file" id="select_file">
+                    <span  class="custom-file-control"></span>
+                </label>
             </div>
 
             <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
+                <div class="col-md-12 offset-md-4">
                     <button type="submit" class="btn btn-info btn-block">
-                        {{ __('Register') }}
+                        {{ __('Зарегистрироваться') }}
                     </button>
                 </div>
             </div>
@@ -119,7 +123,7 @@
 
         </form>
 
-        <div class="mg-t-40 tx-center">Already have an account? <a href="../login" class="tx-info">Sign In</a></div>
+        <div class="mg-t-40 tx-center">Уже имеете аккаунт? <a href="../login" class="tx-info">Войти</a></div>
     </div><!-- login-wrapper -->
 </div><!-- d-flex -->
 

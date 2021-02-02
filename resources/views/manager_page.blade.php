@@ -5,71 +5,68 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <?php
-                if(Auth::user()){
-                    if(Auth::user()->role == 'manager'){
+    <div class="container" style="padding-right: 50px">
 
-                    }
-                    else{
-                        echo '<h1>Вы не имеете права сюда заходить!</h1>';
-                    }
-                }
-                else{
-                    echo '<h1>Вы не имеете права сюда заходить!</h1>';
-                }
+        <?php
+        if(Auth::user()){
+            if(Auth::user()->role == 'manager'){
 
-                ?>
-            </div>
+            }
+            else{
+                echo '<h1>Вы не имеете права сюда заходить!</h1>';
+            }
+        }
+        else{
+            echo '<h1>Вы не имеете права сюда заходить!</h1>';
+        }
 
+        ?>
 
-        </div>
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#accept_user" role="button" aria-expanded="false" >
-                Подтвердить не подтвержденных
-            </a>
-        </p>
-        <div class="collapse" id="accept_user">
+        <div id="accept_user" class="col-4">
             <div class="card card-body">
+
                 <form id="form_accept">
                     <?php
-                    foreach($confirm_acc as $t){
-                        echo '<div class="input-group mb-3">
+                    if(count($confirm_acc)){
+                        echo '<h3>Подтвердить новых пользователей</h3>';
+                        foreach($confirm_acc as $t){
+                            echo '<div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">
                                                         <input type="checkbox" aria-label="Checkbox for following text input" name="'.$t->email.'" id="accept_user">
                                                     </div>
                                                 </div>
                                               <p type="text" class="form-control" >'.$t->name.' '.$t->surname.'  Роль: '.$t->role.'</p>
-                                            </div>';
+                                            </div>
+  <button type="submit" class="btn btn-primary">Подтвердить</button>';
+                        }
                     }
+                    else{
+                        echo '<h3>Нет пользователей, ожидающих подтверждения</h3>';
+                    }
+
                     ?>
-                    <button type="submit" class="btn btn-primary">Подтвердить</button>
+
                 </form>
             </div>
         </div>
 
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#create_subject" role="button" aria-expanded="false" >
-                Создать предмет
-            </a>
-        </p>
-        <div class="collapse" id="create_subject">
+
+        <div id="create_subject " class="col-4">
             <div class="card card-body">
                 <form id="form_create_subject">
-                   <input id="name_of_subject">
-                    <select id="name_of_group" name="name_of_group" class="form-control">
-                        <option selected>Choose...</option>
+                    <h2>Создать учебную дисцеплину</h2>
+                   <input id="name_of_subject" placeholder="Введите название предмета" type="text" class="form-control" style="margin-top: 15px">
+                    <select id="name_of_group" name="name_of_group" class="form-control" style="margin-top: 15px" >
+                        <option selected>Выберите группу...</option>
                         <?php
                         foreach ($group as $t){
                             echo "<option>".$t->name."</option>";
                         }
                         ?>
                     </select>
-                    <select id="teacher_name" name="teacher_name" class="form-control">
-                        <option selected>Choose...</option>
+                    <select id="teacher_name" name="teacher_name" class="form-control" style="margin-top: 15px">
+                        <option selected>Выберите преподавателя...</option>
                         <?php
                             foreach ($teachers as $t){
                                 echo "<option value='".$t->id_teacher."'>".$t->FIO."</option>";
@@ -79,21 +76,18 @@
                             }
                         ?>
                     </select>
-                    <button type="submit" class="btn btn-primary">Подтвердить</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px">Подтвердить</button>
                 </form>
             </div>
         </div>
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#create_group" role="button" aria-expanded="false" >
-                Создать группу
-            </a>
-        </p>
-        <div class="collapse" id="create_group">
+
+        <div id="create_group" class="col-4">
             <div class="card card-body">
                 <form id="form_create_subject">
-                    <input id="C_name_of_group">
+                    <h2>Создать учебную группу</h2>
+                    <input id="C_name_of_group" type="text" class="form-control" placeholder="Введите название группы" style="margin-top: 15px">
 
-                    <button type="submit" class="btn btn-primary">Подтвердить</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px">Подтвердить</button>
                 </form>
             </div>
         </div>

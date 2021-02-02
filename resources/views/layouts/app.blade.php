@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="{{ URL::asset('../css/starlight.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('../css/chat.css')}}">
     <link rel='stylesheet' id='wp-piwik-css' href='https://www.braekling.de/wp-content/plugins/wp-piwik/css/wp-piwik-spark.css?ver=1.0.19' type='text/css' media='all' />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="{{ URL::asset('lib/datatables/jquery.dataTables.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('lib/select2/css/select2.min.css')}}" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Starlight CSS -->
@@ -116,8 +120,7 @@
 
 <div class="sl-header">
     <div class="sl-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
+
     </div><!-- sl-header-left -->
     <div class="sl-header-right">
         <nav class="nav">
@@ -129,33 +132,34 @@
                     </div>
                 @endif
             @else
-                <div class="dropdown">
-                    <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-                        <span class="logged-name">{{ Auth::user()->name }}</span>
-                        <img src="../images/{{Auth::user()->image}}" class="wd-32 rounded-circle" alt="">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-header wd-200">
-                        <ul class="list-unstyled user-profile-nav">
-                            <li><a href="http://phosphene/edit_profile"><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
-                            <li>
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="icon ion-power"></i> Sign Out
-                                </a>
-                            </li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </ul>
-                    </div><!-- dropdown-menu -->
-                </div><!-- dropdown -->
-                <div class="navicon-right">
-                    <a id="btnRightMenu" href="" class="pos-relative">
-                        <i class="icon ion-ios-bell-outline"></i>
-                        <!-- start: if statement -->
-                        <span class="square-8 bg-danger"></span>
-                        <!-- end: if statement -->
-                    </a>
-                </div><!-- navicon-right -->
+                @if (Auth::user()->status == 0)
+
+
+
+                @else
+                    <div class="dropdown">
+                        <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+                            <span class="logged-name">{{ Auth::user()->name }} {{Auth::user()->surname}}</span>
+                            <img src="../images/{{Auth::user()->image}}" class="wd-32 rounded-circle" style="border-radius: 50%; height:32px" alt="">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-header wd-200">
+                            <ul class="list-unstyled user-profile-nav">
+                                <li><a href="http://phosphene/edit_profile"><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
+                                <li>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="icon ion-power"></i> Sign Out
+                                    </a>
+                                </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </ul>
+                        </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                @endif
+
+
+
             @endguest
         </nav>
 
@@ -164,7 +168,16 @@
 <!-- ########## END: HEAD PANEL ########## -->
 <main class="py-4">
     <h1>123</h1>
-    @yield('content')
+    @if(Auth::user())
+        @if(Auth::user()->status == 1)
+            @yield('content')
+        @else
+            <h1>Ожидайте подтверждения аккаунта</h1>
+        @endif
+
+    @endif
+
+
 </main>
 <!-- ########## START: RIGHT PANEL ########## -->
 <div class="sl-sideright">
@@ -228,5 +241,15 @@
 <script src="{{ URL::asset('js/dashboard.js')}}"></script>
 
 
+    <script src="{{ URL::asset('lib/datatables/jquery.dataTables.js')}}"></script>
+    <script src="{{ URL::asset('lib/datatables-responsive/dataTables.responsive.js')}}"></script>
+    <script src="{{ URL::asset('lib/select2/js/select2.min.js')}}"></script>
+    <script src="{{ URL::asset('lib/datatables/jquery.dataTables.js')}}"></script>
+    <script src="{{ URL::asset('lib/datatables-responsive/dataTables.responsive.js')}}"></script>
+    <script src="{{ URL::asset('lib/select2/js/select2.min.js')}}"></script>
+
+    <script>
+        if(!{{Auth::user()->status}}) alert('Вы не подтверждены');
+    </script>
 </body>
 </html>

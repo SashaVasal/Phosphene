@@ -1,6 +1,29 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
 
-@section('content')
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- vendor css -->
+    <link href="{{ URL::asset('lib/font-awesome/css/font-awesome.css')}}"  rel="stylesheet">
+    <link href="{{ URL::asset('lib/Ionicons/css/ionicons.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('lib/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('lib/rickshaw/rickshaw.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('../css/starlight.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('../css/chat.css')}}">
+    <link rel='stylesheet' id='wp-piwik-css' href='https://www.braekling.de/wp-content/plugins/wp-piwik/css/wp-piwik-spark.css?ver=1.0.19' type='text/css' media='all' />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="{{ URL::asset('lib/datatables/jquery.dataTables.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('lib/select2/css/select2.min.css')}}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Starlight CSS -->
+    <link rel="stylesheet" href="{{ URL::asset('css/starlight.css')}}">
+
+</head>
 
     <?php
 
@@ -20,11 +43,8 @@
         return false;
     }
     ?>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="chat-container col-5">
-                <ul class="chat-box chatContainerScroll">
+            <div class="chat-container " >
+                <ul class="chat-box chatContainerScroll" >
                     <?php
                         foreach (DB::table('comments')->where('section_id',$id)->get() as $c){
                             if($c->from == Auth::user()->id){
@@ -108,4 +128,33 @@
     </script>
 
 
-@endsection
+<script src="{{ URL::asset('lib/jquery/jquery.js')}}"></script>
+<script src="{{ URL::asset('lib/popper.js/popper.js')}}"></script>
+<script src="{{ URL::asset('lib/bootstrap/bootstrap.js')}}"></script>
+<script src="{{ URL::asset('lib/jquery-ui/jquery-ui.js')}}"></script>
+<script src="{{ URL::asset('lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js')}}"></script>
+<script src="{{ URL::asset('lib/jquery.sparkline.bower/jquery.sparkline.min.js')}}"></script>
+<script src="{{ URL::asset('lib/d3/d3.js')}}"></script>
+<script src="{{ URL::asset('lib/rickshaw/rickshaw.min.js')}}"></script>
+<script src="{{ URL::asset('lib/chart.js/Chart.js')}}"></script>
+<script src="{{ URL::asset('lib/Flot/jquery.flot.js')}}"></script>
+<script src="{{ URL::asset('lib/Flot/jquery.flot.pie.js')}}"></script>
+<script src="{{ URL::asset('lib/Flot/jquery.flot.resize.js')}}"></script>
+<script src="{{ URL::asset('lib/flot-spline/jquery.flot.spline.js')}}"></script>
+<script src="{{ URL::asset('js/starlight.js')}}"></script>
+<script src="{{ URL::asset('js/ResizeSensor.js')}}"></script>
+<script src="{{ URL::asset('js/dashboard.js')}}"></script>
+
+
+<script src="{{ URL::asset('lib/datatables/jquery.dataTables.js')}}"></script>
+<script src="{{ URL::asset('lib/datatables-responsive/dataTables.responsive.js')}}"></script>
+<script src="{{ URL::asset('lib/select2/js/select2.min.js')}}"></script>
+<script src="{{ URL::asset('lib/datatables/jquery.dataTables.js')}}"></script>
+<script src="{{ URL::asset('lib/datatables-responsive/dataTables.responsive.js')}}"></script>
+<script src="{{ URL::asset('lib/select2/js/select2.min.js')}}"></script>
+
+<script>
+    if(!{{Auth::user()->status}}) alert('Вы не подтверждены');
+</script>
+</body>
+</html>

@@ -17,6 +17,7 @@ class TeacherController extends Controller
         $sections = Section::all()->where('id_teacher',Auth::user()->id);
         return view('teacher_page',['subjects'=>$subjects,'sections'=>$sections]);
     }
+
     public function create_section(Request $req){
         Section::create([
             'name'=>$req->name_of_section,
@@ -44,6 +45,9 @@ class TeacherController extends Controller
             'file'=>$new_name
         ]);
         return 'ok';
+    }
+    public function get_comments(Request $request){
+
     }
 
 }

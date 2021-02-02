@@ -9,7 +9,7 @@
     <!-- vendor css -->
     <link href="{{URL::asset('lib/font-awesome/css/font-awesome.css" rel="stylesheet')}}">
     <link href="{{URL::asset('lib/Ionicons/css/ionicons.css')}}" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="../css/starlight.css">
@@ -21,11 +21,11 @@
 
     <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white">
 
-        <div class="signin-logo tx-center tx-24 tx-bold tx-inverse">StarLight</div>
+        <div class="signin-logo tx-center tx-24 tx-bold tx-inverse" style="margin-bottom: 20px">Phosphene</div>
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Enter your username" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Введите email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
             </div><!-- form-group -->
 
             <div class="form-group">
-                <input type="password" class="form-control @error('password') is-invalid @enderror"  placeholder="Enter your password" id="password" name="password" required autocomplete="current-password">
+                <input type="password" class="form-control @error('password') is-invalid @enderror"  placeholder="Введите пароль" id="password" name="password" required autocomplete="current-password">
                 @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -42,18 +42,11 @@
                 @enderror
             </div>
 
-            <div class="form-group">
-                <div class="btn-block text-right">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
-            </div>
+
 
             <div class="form-group">
                 <button type="submit" class="btn btn-info btn-block">
-                    {{ __('Login') }}
+                    {{ __('Ввод') }}
                 </button>
 
                 @if (Route::has('password.request'))
@@ -64,7 +57,7 @@
             </div>
 
         </form>
-        <div class="mg-t-60 tx-center">Not yet a member? <a href="../register" class="tx-info">Sign Up</a></div>
+        <div class="mg-t-20 tx-center">Нет аккаунта? Зарегистрируйтесь! <a href="../register" class="tx-info">Зарегистрироваться</a></div>
     </div><!-- login-wrapper -->
 </div><!-- d-flex -->
 

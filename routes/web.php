@@ -40,11 +40,12 @@ Route::post('/manager_page/create_subject', 'ManagerController@create_subject');
 Route::post('/manager_page/create_group', 'ManagerController@create_group');
 
 
-Route::post('store-file', 'FileController@store');
+
 
 Route::get('/teacher_page', 'TeacherController@OpenMainPage');
 Route::post('/teacher_page/create_section', 'TeacherController@create_section');
 Route::post('/teacher_page/create_comment', 'TeacherController@create_comment');
+Route::get('/teacher_page/get_comments', 'TeacherController@get_comments');
 
 
 Route::get('/student_page', 'StudentController@OpenMainPage');

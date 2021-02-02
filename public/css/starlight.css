@@ -617,11 +617,12 @@ pre code {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
+
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    margin: 40px;
 }
 @media (min-width: 576px) {
   .container {
@@ -640,7 +641,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 100%;
   }
 }
 

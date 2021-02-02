@@ -3,8 +3,71 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="395a8bcb-6641-496b-bd04-3af48d9b9cbc" name="Default Changelist" comment="" />
+    <list default="true" id="395a8bcb-6641-496b-bd04-3af48d9b9cbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lib/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lib/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lib/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lib/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lib/images/sort_desc_disabled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/starlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/starlight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1561045646.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/1561045646.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lib/datatables/jquery.dataTables.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/datatables/jquery.dataTables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bracket.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/bracket.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/starlight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/starlight.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/authhome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/imageUpload.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/manager_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manager_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teacher_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +83,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -130,6 +196,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1j90mcJ29l8oNxKdkg8nBKS6IR6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -137,7 +204,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/lib/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -145,6 +212,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OSPanel\domains\Phosphene\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\Phosphene\public\lib\images" />
+      <recent name="D:\OSPanel\domains\Phosphene\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,13 +262,40 @@
       <workItem from="1610335969113" duration="11915000" />
       <workItem from="1610379388796" duration="4730000" />
       <workItem from="1610574950694" duration="22209000" />
+      <workItem from="1611282916620" duration="1197000" />
+      <workItem from="1611352134530" duration="2237000" />
+      <workItem from="1611435264056" duration="9531000" />
+      <workItem from="1611894263862" duration="603000" />
+      <workItem from="1611974347176" duration="1082000" />
+      <workItem from="1612058310632" duration="1236000" />
+      <workItem from="1612084091291" duration="3713000" />
+      <workItem from="1612160233199" duration="690000" />
+      <workItem from="1612166481392" duration="12631000" />
+      <workItem from="1612229516316" duration="7409000" />
+      <workItem from="1612251896959" duration="1332000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611448346962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611448346962" />
     <state x="625" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603836726478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -207,9 +305,10 @@
     </state>
     <state x="996" y="303" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610588410163" />
     <state x="996" y="303" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610338882929" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606636665672">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1612179883521">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612179883521" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606636665672" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610589781267">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -224,10 +323,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2298" y="-14" width="1350" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610027104926" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1610006798862">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1612167467576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610006798862" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612167467576" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606630593255" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610585744612">
       <screen x="0" y="0" width="1920" height="1040" />
